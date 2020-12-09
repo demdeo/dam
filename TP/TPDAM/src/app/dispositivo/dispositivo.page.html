@@ -1,0 +1,19 @@
+<ion-header>
+    <ion-toolbar class="new-color">
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="dispositivo"></ion-back-button>
+      </ion-buttons>
+      <ion-title>Detalle Sensor</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-card>
+      <div id="highcharts" style="width:100%; height:300px;"></div>
+      <ion-button expand="block" (click)="cambiarEstadoElectrovalvula()">
+        <p *ngIf="!estadoElectrovalvula" appChangeColor> Abrir Electroválvula</p>
+        <p *ngIf="estadoElectrovalvula" appChangeColor> Cerrar Electroválvula</p>
+       </ion-button>
+    </ion-card>
+  </ion-content>
+  
